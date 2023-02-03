@@ -42,7 +42,6 @@ function Products(props) {
                             payload: { key: index, product: newPorduct },
                           });
                         }}
-                        href="#"
                         className="btn btn-secondary"
                       >
                         ADD TO CART

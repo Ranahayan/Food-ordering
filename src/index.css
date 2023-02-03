@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: min(100vw, 1440px);
+  width: min(100vw, 1806);
   font-size: clamp(1.34rem, 10vw, 2.4rem);
 }
 
