@@ -1,0 +1,27 @@
+name: React CI/CD
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ${{matrix.on}}
+    strategy:
+      matrix:
+        os: [ubantu-latest,windows-latest,macOS-latest]
+        
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Set up Node
+      uses: actions/setup-node@v2
+      with:
+        node-version: 6
+        
+    - name: Intsall dependencies
+      run: npm install
+
+    - name: Build app
+      run: npm run build
