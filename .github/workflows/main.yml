@@ -4,9 +4,12 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 jobs:
   build:
-    runs-on: ${{matrix.on}}
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubantu-latest,windows-latest,macOS-latest]
@@ -20,7 +23,7 @@ jobs:
       with:
         node-version: 6
         
-    - name: Intsall dependencies
+    - name: Install dependencies
       run: npm install
 
     - name: Build app
