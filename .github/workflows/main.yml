@@ -9,10 +9,7 @@ on:
       - main
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubantu-latest,windows-latest,macOS-latest]
+    runs-on: ubuntu-latest
         
     steps:
     - name: Checkout code
